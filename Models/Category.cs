@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace AttendanceApp.Models
+namespace MyApp.Models
 {
     public class Category
     {

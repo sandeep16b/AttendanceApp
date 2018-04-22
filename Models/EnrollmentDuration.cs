@@ -4,19 +4,19 @@ using System.ComponentModel.DataAnnotations;
 
 namespace MyApp.Models
 {
-    public class SubCategory
+    public class EnrollmentDuration
     {
          public int Id { get; set; }
         [Required]
         [StringLength(255)]
         public string Name { get; set; }
-        public ICollection<Course> Courses {get; set;}
-        public SubCategory()
-        {
-            Courses = new Collection<Course>();
-        }
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
 
+       
+
+         public ICollection<Enrollment> Enrollment {get; set;}
+        public EnrollmentDuration()
+        {
+            Enrollment = new Collection<Enrollment>();
+        }
     }
 }

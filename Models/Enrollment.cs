@@ -1,4 +1,7 @@
-namespace AttendanceApp.Models
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
+namespace MyApp.Models
 {
     public class Enrollment
     {
@@ -11,6 +14,10 @@ namespace AttendanceApp.Models
      
         public Student Student {get; set;}
         public int StudentID { get; set; }
+
+       public EnrollmentDuration EnrollmentDuration { get; set; }
+
+        public int EnrollmentDurationId { get; set; }
         
     }
 }

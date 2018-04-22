@@ -1,4 +1,4 @@
-using AttendanceApp.Models;
+using MyApp.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace MyApp.Persistence
