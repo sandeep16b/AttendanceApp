@@ -6,7 +6,7 @@ namespace MyApp.Models
 {
     public class Student
     {
-         public int Id { get; set; }
+        public int Id { get; set; }
         [Required]
         [StringLength(255)]
         public string FirstName { get; set; }
@@ -41,6 +41,8 @@ namespace MyApp.Models
         public int ParentId {get; set;}
 
         public ICollection<Enrollment> Enrollments {get; set;}
+      
+
         public Student()
         {
             Enrollments = new Collection<Enrollment>();

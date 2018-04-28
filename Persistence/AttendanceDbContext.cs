@@ -26,9 +26,6 @@ namespace MyApp.Persistence
 
 
               public DbSet<Enrollment> Enrollments { get; set; }
-            
-            
-            
-        
+               public DbSet<EnrollmentDuration> EnrollmentDurations { get; set; }
     }
 }

@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace MyApp.Models
@@ -34,6 +36,13 @@ namespace MyApp.Models
          public ClassType ClassType {get; set;}
 
         public int ClassTypeId {get; set;}
+
+        public ICollection<Enrollment> Enrollments {get; set;}
+        public Class()
+        {
+            Enrollments = new Collection<Enrollment>();
+        }
+
 
 
     }

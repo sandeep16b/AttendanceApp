@@ -14,11 +14,11 @@ namespace MyApp.Models
        
         public Class Class {get; set;}
 
-        public int ClassID { get; set; }
+        public int ClassId { get; set; }
         
      
         public Student Student {get; set;}
-        public int StudentID { get; set; }
+        public int StudentId { get; set; }
 
        public EnrollmentDuration EnrollmentDuration { get; set; }
 
