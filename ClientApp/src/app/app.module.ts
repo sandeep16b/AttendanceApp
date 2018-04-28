@@ -26,6 +26,7 @@ import { EnrollmentFormComponent } from './enrollment-form/enrollment-form.compo
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
+      { path: 'enrollments/new', component: EnrollmentFormComponent},
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ])
