@@ -3,69 +3,63 @@
     <div class="panel-heading"><h1>New Enrollment</h1></div>
     <div class="panel-body">
         <form >
-            <!-- <div class="form-group">
-              <label for="student">Student</label>
-              <select id="student" class="form-control" >
-                <option value=""></option>
-                <option *ngFor="let e of students" value="{{e.id}}">{{e.firstName}} + {{e.lastName}}</option>
-              </select>
-            </div> -->
-           
             <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="classType">Class Type</label>
-                    <select name="" id="classType" class="form-control" (change)="onClassTypeChange()" [(ngModel)]="class.classType" name="classType" >
+                <div class="form-group col-md-4">
+                    <label for="classType">Subject</label>
+                    <select id="classType"  class="form-control" (change)="onClassTypeChange()" [(ngModel)]="class.classType" name="classType" >
                         <option value="" disabled selected >Select your option</option>
-                    <option *ngFor="let c of classTypes" value="{{c.id}}">{{c.name}}</option> 
+                        <option *ngFor="let c of classTypes" value="{{c.id}}">{{c.name}}</option> 
                   </select>
                 </div>
-                 <div class="form-group col-md-6">
+
+                <div class="form-group col-md-4">
+                    <label for="classType">Class Type</label>
+                    <select id="classType"  class="form-control" (change)="onClassTypeChange()" [(ngModel)]="class.classType" name="classType" >
+                        <option value="" disabled selected >Select your option</option>
+                        <option *ngFor="let c of classTypes" value="{{c.id}}">{{c.name}}</option> 
+                  </select>
+                </div>
+                 <div class="form-group col-md-4">
                   <label for="level">Level</label>
-                  <select name="" id="level" class="form-control">
-                      <option value="" selected disabled>Please select your level</option>
+                  <select name="" required="true" id="level" class="form-control">
+                      <option value="" selected disabled>Please select the level</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                   </select>
                 </div>
-           
-            <!-- <div class="form-group">
-              <label for="course">Course</label>
-              <select name="" id="course" class="form-control">
-              <option value=""></option>
-              <option *ngFor="let c of courses" value="{{c.id}}">{{c.name}}</option> 
-            </select>
-            </div> -->
           
-            <div class="form-group col-md-12">
-              <label for="class">Class</label>
-              <select name="" id="class" class="form-control">
-              <option value=""></option>
-              <option *ngFor="let e of classes" value="{{e.id}}">{{e.frequency}}
-                  {{e.startDate}} ({{e.startTime}}-{{endTime}}) + {{e.endDate}}</option>
-                </select>
-            </div>
+              <div class="form-group col-md-12">
+                <label for="class">Class</label>
+                <select name="" required="true" id="class" class="form-control">
+                <option value=""></option>
+                <option *ngFor="let e of classes" value="{{e.id}}">{{e.frequency}}
+                    {{e.startDate}} ({{e.startTime}}-{{endTime}}) + {{e.endDate}}</option>
+                  </select>
+              </div>
            
-          </div>
-          <div class="form-group col-md-10">
+            </div>
+
+
+              <div class="form-group col-md-10">
               
               <hr class="col-xs-10">
-          </div>
+              </div>
 
-          <div class="form-row">
+              <div class="form-row">
             <div class="form-group col-md-3">
-                <input type="text" class="form-control" id="StudentFirstName" placeholder="First Name">
+                <input type="text" required="true" class="form-control" id="StudentFirstName" placeholder="First Name">
             </div>
             <div class="form-group col-md-3" >
-                  <input type="text" class="form-control" id="StudentLastName" placeholder="Last Name">
+                  <input type="text" required="true" class="form-control" id="StudentLastName" placeholder="Last Name">
             </div>
             <div class="form-group col-md-3">
                 
-                <input type="text" class="form-control" id="School" placeholder="Grade">
+                <input type="text" required="true" class="form-control" id="School" placeholder="Grade">
             </div>
             <div class="form-group col-md-3">
               
-              <input type="text" class="form-control" id="School" placeholder="School">
+              <input type="text" required="true" class="form-control" id="School" placeholder="School">
             </div>
           </div>
           <div class="form-group col-md-10">
@@ -128,28 +122,32 @@
                          Payment
                         </label>
                   </div> -->
-
-                  <div class="col-md-3">
-                      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                      <label class="form-check-label" for="exampleRadios1">
-                          Paid
-                        </label>
+                  <label for="">Payment Successful?</label>
+                  <div class="radio">
+                    <label for="paid">
+                      <input type="radio" name="PaymentSuccessful" value="true" id="paid">Paid
+                    </label>
                   </div>
+
+                  <div class="radio">
+                      <label for="notpaid">
+                        <input type="radio" name="PaymentSuccessful" value="false" id="notpaid">Not Paid
+                      </label>
+                    </div>
                  
-                  <div class="col-md-3">
+                  <!-- <div class="col-md-3">
                       <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                       <label class="form-check-label" for="exampleRadios1">
                           Not Paid
                         </label>
-                  </div>
+                  </div> -->
                     
               </div>
               <div class="form-group col-md-12">
-                 
                   <button type="button" class="btn btn-primary">Add New Enrollment</button>
               </div>
               
-          </div>
+            </div>
           </form>
           
 

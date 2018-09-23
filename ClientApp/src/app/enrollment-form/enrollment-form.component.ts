@@ -13,6 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class EnrollmentFormComponent implements OnInit {
   class: any = {};
   classes: any[];
+  levels: any[];
   students: any[];
   courses: any[];
   classTypes: any[];
@@ -38,10 +39,10 @@ export class EnrollmentFormComponent implements OnInit {
       console.log("Courses: ", this.courses);
     }); 
 
-    this.classService.getClasses().subscribe(classes => {
-      this.classes = classes;
-      console.log("Classes: ", this.classes);
-    }); 
+    // this.classService.getClasses().subscribe(classes => {
+    //   this.classes = classes;
+    //   console.log("Classes: ", this.classes);
+    // }); 
 
     this.classTypeService.getClassTypes().subscribe(classTypes => {
       this.classTypes = classTypes;
@@ -52,8 +53,12 @@ export class EnrollmentFormComponent implements OnInit {
   }
 
   onClassTypeChange(){
+    // console.log("Classes", this.class);
     var selectedClassType = this.classTypes.find(m => m.id == this.class.classType);
     this.classes = selectedClassType ? selectedClassType.classes : [];
+
+    
+    // this.levels = 
   }
 
 }

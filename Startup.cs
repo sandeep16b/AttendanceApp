@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using MyApp.Persistence;
 
 namespace MyApp
@@ -39,15 +40,18 @@ namespace MyApp
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //  app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
-                // {
-                //     HotModuleReplacement = true
-                // });
+                 // app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+                 //{
+                 //    HotModuleReplacement = true
+                 //});
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+
+          // LoggerFactory.AddConsole(Configuration.GetSection);
 
             app.UseStaticFiles();
             app.UseSpaStaticFiles();

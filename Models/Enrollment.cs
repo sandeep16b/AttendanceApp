@@ -23,6 +23,9 @@ namespace MyApp.Models
        public EnrollmentDuration EnrollmentDuration { get; set; }
 
         public int EnrollmentDurationId { get; set; }
+
+        [Required]
+        public string Payment { get; set; }
         
     }
 }

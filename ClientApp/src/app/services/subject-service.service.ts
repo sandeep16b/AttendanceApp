@@ -2,12 +2,12 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 @Injectable()
-export class CourseService {
+export class SubjectServiceService {
 
   constructor(private http: Http) { }
 
-  getCourses(){
-    return this.http.get('/api/courses')
+  getSubjects(){
+    return this.http.get('/api/subjects')
     .map(res => res.json());
   }
 
